@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ứng dụng Quét Nhãn Thực Phẩm bằng AI - Trang Chủ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 60px;
+      padding-top: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #667eea;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .feature-badge {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #667eea;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .stats {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      color: white;
+      margin-bottom: 60px;
+      backdrop-filter: blur(10px);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-item h4 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .stat-item p {
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      opacity: 0.8;
+      margin-top: 60px;
+      padding-bottom: 20px;
+    }
+
+    .highlight {
+      color: #ffd700;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🍎 Ứng dụng Quét Nhãn Thực Phẩm bằng AI</h1>
+      <p>Bảo vệ sức khỏe gia đình bạn với công nghệ AI tiên tiến</p>
+      <button class="cta-button" onclick="document.location.href='./index.html'">
+        ▶ Bắt đầu sử dụng
+      </button>
+    </header>
+
+    <div class="stats">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h4>50K+</h4>
+          <p>Người dùng</p>
+        </div>
+        <div class="stat-item">
+          <h4>100K+</h4>
+          <p>Sản phẩm</p>
+        </div>
+        <div class="stat-item">
+          <h4>99.5%</h4>
+          <p>Độ chính xác</p>
+        </div>
+        <div class="stat-item">
+          <h4>15+</h4>
+          <p>Loại dị ứng</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1: AI Scan -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+          📸
+        </div>
+        <h3>🔍 AI Scan</h3>
+        <p>Kiểm tra thực phẩm thực tế bằng camera. AI sẽ phân tích hình ảnh và cung cấp thông tin dinh dưỡng chi tiết.</p>
+        <span class="feature-badge">⚡ Tức thời</span>
+      </div>
+
+      <!-- Feature 2: AI Label Inspector -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+          📋
+        </div>
+        <h3>🏷️ Kiểm tra Nhãn & Thành phần</h3>
+        <p>Quét nhãn thực phẩm để kiểm tra thành phần, dị ứng, hàm lượng dinh dưỡng và các chất hóa học.</p>
+        <span class="feature-badge">🔬 Chi tiết</span>
+      </div>
+
+      <!-- Feature 3: Anti-Fake (BAV) -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+          🛡️
+        </div>
+        <h3>🚫 Chống Hàng Giả (BAV)</h3>
+        <p>Xác thực tính xác thực của sản phẩm bằng mã vạch (Barcode Authentication Verification) để tránh mua hàng giả.</p>
+        <span class="feature-badge">🔐 Bảo mật</span>
+      </div>
+
+      <!-- Feature 4: Blockchain Traceability -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">
+          ⛓️
+        </div>
+        <h3>🌍 Truy xuất Nguồn gốc (Blockchain)</h3>
+        <p>Theo dõi nguồn gốc sản phẩm từ nhà máy đến tay bạn. Minh bạch, an toàn và đáng tin cậy.</p>
+        <span class="feature-badge">📍 Truy xuất</span>
+      </div>
+
+      <!-- Feature 5: AI Risk Scoring -->
+      <div class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
+          ⚠️
+        </div>
+        <h3>📊 AI Risk Scoring</h3>
+        <p>Tổng hợp dữ liệu và cung cấp điểm số rủi ro tuyệt đối để hỗ trợ quyết định mua sắm thực phẩm an toàn.</p>
+        <span class="feature-badge">🤖 Thông minh</span>
+      </div>
+    </div>
+
+    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; padding: 40px; margin-bottom: 60px;">
+      <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Tại sao chọn chúng tôi?</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">✅</div>
+          <h4 style="color: #667eea;">Không dữ liệu cá nhân</h4>
+          <p style="color: #666; font-size: 0.9rem;">Dữ liệu lưu trữ cục bộ, hoàn toàn an toàn</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">⚡</div>
+          <h4 style="color: #667eea;">Tức thời</h4>
+          <p style="color: #666; font-size: 0.9rem;">Kết quả ngay lập tức, không chờ đợi</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">🎯</div>
+          <h4 style="color: #667eea;">Chính xác</h4>
+          <p style="color: #666; font-size: 0.9rem;">AI độ chính xác cao, được kiểm chứng</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 10px;">🌍</div>
+          <h4 style="color: #667eea;">Toàn cầu</h4>
+          <p style="color: #666; font-size: 0.9rem;">Hỗ trợ hàng ngàn sản phẩm quốc tế</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 40px; backdrop-filter: blur(10px); color: white;">
+      <h2 style="margin-bottom: 20px;">Sẵn sàng bảo vệ sức khỏe gia đình?</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem;">Tải ứng dụng ngay hôm nay và bắt đầu quét thực phẩm</p>
+      <button class="cta-button" onclick="document.location.href='./index.html'">
+        ▶ Vào ứng dụng
+      </button>
+    </div>
+
+    <footer>
+      <p>© 2026 Ứng dụng Quét Nhãn Thực Phẩm bằng AI | <span class="highlight">Cộng đồng</span></p>
+      <p style="margin-top: 10px; font-size: 0.9rem;">Được phát triển với ❤️ cho sức khỏe của bạn</p>
+    </footer>
+  </div>
+</body>
+</html>
