@@ -14,7 +14,7 @@
     "Health Conditions":"Tình trạng sức khỏe",
     "Get personalized recommendations":"Nhận khuyến nghị cá nhân",
     "Preferred Language":"Ngôn ngữ ưu tiên",
-    "Scan Label":"Quét Nhãn",
+    "Scan Label":"AI Scan – Kiểm Tra Thực Phẩm Thực Tế",
     "Camera OCR":"Máy ảnh (OCR)",
     "Smart Scan Food Label":"Quét nhãn thông minh",
     "Detect allergens instantly":"Phát hiện dị nguyên ngay lập tức",
